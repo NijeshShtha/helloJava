@@ -16,8 +16,8 @@ pipeline {
         }
         stage('Backend'){
             agent{
-                docker{
-                    image 'openjdk:17'
+                docker {
+                    image 'eclipse-temurin:17'
                 }
             }
             steps{
