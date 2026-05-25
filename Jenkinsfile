@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Frontend') {
             agent{
-                label 'java-agent'
+                docker{
+                    image 'node:18'
+                }
             }
             steps {
                 dir('js'){
@@ -14,7 +16,9 @@ pipeline {
         }
         stage('Backend'){
             agent{
-                label 'java-script-agent'
+                docker{
+                    image 'openjdk:17'
+                }
             }
             steps{
                 dir('java'){
