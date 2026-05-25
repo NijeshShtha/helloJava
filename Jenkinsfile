@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Backend'){
             agent{
-                lable 'java-script-agent'
+                label 'java-script-agent'
             }
             steps{
                 dir('java'){
